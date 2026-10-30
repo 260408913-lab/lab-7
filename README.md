@@ -1,16 +1,93 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Online Shop - Lab 7
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This is a multi-page online shop built using React and Vite.
+It allows users to browse products, search and filter products,
+view product details, and manage a shopping cart.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Router
+- Context API
+- useReducer
+- Zustand
+- Custom Hooks
+- Fetch API
+- localStorage
+- CSS
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Home page
+- Product catalogue
+- Product search and category filtering
+- Product detail pages
+- Shopping cart
+- Add and remove products
+- Update product quantities
+- Cart persistence using localStorage
+- Demo login and logout
+- Protected cart route
+- Light and dark themes
+- 404 Not Found page
+
+## Demo Login
+
+- Email: YOUR_STUDENT_EMAIL
+- Password: demo123456
+
+Replace YOUR_STUDENT_EMAIL with your actual student email.
+
+## How to Run
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Build the project:
+
+npm run build
+
+## API
+
+Products are retrieved from DummyJSON:
+
+https://dummyjson.com/products?limit=100
+
+## Project Structure
+
+src/
+- api/
+- hooks/
+- context/
+- store/
+- components/
+- pages/
+- App.jsx
+- main.jsx
+
+## State Management
+
+Context API and useReducer manage authentication.
+Zustand manages the shopping cart.
+localStorage saves the cart and theme preference.
+
+## Reflection
+
+React Router helped me organize the application into multiple pages.
+Context API and useReducer helped me manage authentication.
+Zustand helped me manage cart state separately.
+Custom hooks helped me reuse data-fetching and localStorage logic.
+
+## Challenges and Learning
+
+Write about the actual challenges you encountered while building
+the project and how you solved them.

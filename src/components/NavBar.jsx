@@ -2,7 +2,6 @@
 import { NavLink, useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext";
 import { useCartStore } from "../store/cartStore";
-import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export default function NavBar({ theme, setTheme }) {
   const { user, logoutUser } = useAuth();
@@ -11,7 +10,6 @@ export default function NavBar({ theme, setTheme }) {
   const itemCount = useCartStore((state) =>
     state.items.reduce((total, item) => total + item.quantity, 0)
   );
-
 
   function handleLogout() {
     logoutUser();
@@ -27,10 +25,7 @@ export default function NavBar({ theme, setTheme }) {
       <div className="nav-links">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/products">Products</NavLink>
-
-        <NavLink to="/cart">
-          Cart ({itemCount})
-        </NavLink>
+        <NavLink to="/cart">Cart ({itemCount})</NavLink>
 
         {user ? (
           <>
