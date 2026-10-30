@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { useCartStore } from "../store/cartStore";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
-export default function NavBar() {
+export default function NavBar({ theme, setTheme }) {
   const { user, logoutUser } = useAuth();
   const navigate = useNavigate();
 
@@ -12,7 +12,6 @@ export default function NavBar() {
     state.items.reduce((total, item) => total + item.quantity, 0)
   );
 
-  const [theme, setTheme] = useLocalStorage("shop-theme", "light");
 
   function handleLogout() {
     logoutUser();
